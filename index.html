@@ -9,6 +9,7 @@
   <title>z-Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="小前端一枚">
+<meta name="keywords" content="前端,js,html,css">
 <meta property="og:type" content="website">
 <meta property="og:title" content="z-Blog">
 <meta property="og:url" content="http://femonster.github.io/index.html">
@@ -59,7 +60,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/other">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -83,11 +84,11 @@
 				
 					<a class="github" target="_blank" href="https://github.com/femonster" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+					<a class="qq" target="_blank" href="/409465662" title="qq"><i class="icon-qq"></i></a>
 		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="mail" target="_blank" href="mailto:409465662@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
-					<a class="mail" target="_blank" href="/409465662@qq.com" title="mail"><i class="icon-mail"></i></a>
+					<a class="linkedin" target="_blank" href="http://www.linkedin.com/in/%E8%80%95%E6%81%BA-%E5%BC%A0-770324128/" title="linkedin"><i class="icon-linkedin"></i></a>
 		        
 			</div>
 		</nav>
@@ -126,11 +127,11 @@
 					
 						<a class="github" target="_blank" href="https://github.com/femonster" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+						<a class="qq" target="_blank" href="/409465662" title="qq"><i class="icon-qq"></i></a>
 			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="mail" target="_blank" href="mailto:409465662@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
-						<a class="mail" target="_blank" href="/409465662@qq.com" title="mail"><i class="icon-mail"></i></a>
+						<a class="linkedin" target="_blank" href="http://www.linkedin.com/in/%E8%80%95%E6%81%BA-%E5%BC%A0-770324128/" title="linkedin"><i class="icon-linkedin"></i></a>
 			        
 				</div>
 			</nav>
@@ -141,7 +142,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 50%"><a href="/other">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -158,26 +159,33 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-js的一些笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/24/hello/">hello</a>
+      <a class="article-title" href="/2017/09/25/js的一些笔记/">js的一些笔记</a>
     </h1>
   
 
         
-        <a href="/2017/09/24/hello/" class="archive-article-date">
-  	<time datetime="2017-09-24T11:27:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-24</time>
+        <a href="/2017/09/25/js的一些笔记/" class="archive-article-date">
+  	<time datetime="2017-09-25T14:11:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        <p><a href="http://www.webstandards.org/files/acid2/test.html#top" target="_blank" rel="external">http://www.webstandards.org/files/acid2/test.html#top</a><br>检测是否为标准浏览器</p>
+<h4 id="1-call-apply"><a href="#1-call-apply" class="headerlink" title="1.call,apply"></a>1.call,apply</h4><blockquote>
+<p>作用：参数传递，(*)扩大作用域<br>==call, apply作用就是借用别人的方法来调用,就像调用自己的一样.==<br>call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个数组中再传递, 最后借用方法的参数列表是一样的</p>
+</blockquote>
+<h4 id="2-创建对象"><a href="#2-创建对象" class="headerlink" title="2.创建对象"></a>2.创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">//单个对象，用json(重要)</div><div class="line">var person1=&#123;</div><div class="line">    name:&quot;john&quot;,</div><div class="line">    age:23,</div><div class="line">    friends:[&quot;Bob&quot;,&quot;zhang&quot;],</div><div class="line">    say:function()&#123;</div><div class="line">        alert(this.name+&apos;,&apos;+this.age);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//批量创建对象，使用构造函数+原型(动态原型模式),不能使用字面量方法来重写原型</div><div class="line">function Person(name,age)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    if(typeof this.showName!=&apos;function&apos;)&#123;//防止多次创建</div><div class="line">        Person.prototype.showName=function()&#123;</div><div class="line">            alert(this.name);</div><div class="line">        &#125;;</div><div class="line">        Person.prototype.showAge=function()&#123;</div><div class="line">            alert(this.age);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1 = new Person(&quot;zhang&quot;,22);</div><div class="line">person1.showName(); //zhang</div><div class="line">var person2 = new Person(&quot;song&quot;,23);</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/09/25/js的一些笔记/#more">more >></a>
         
       
 
@@ -190,7 +198,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/24/hello/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/09/25/js的一些笔记/">展开全文 >></a>
         </p>
       
 
@@ -240,15 +248,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="终于开了自己的博客"><a href="#终于开了自己的博客" class="headerlink" title="终于开了自己的博客"></a>终于开了自己的博客</h2><pre><code>终于开了博客了，这一年左右自己的技术方面进步很缓慢，反思一下，终究还是自己太懒了。看过的就不在动手记一记。  
+就用这个博客，在学习的时候梳理一下自己的思路吧！   
+加油！  
+</code></pre><p><em>— 耕恺</em></p>
 
       
 
@@ -463,7 +466,7 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">94年&lt;br&gt;狮子座&lt;br&gt;一枚小前端</div>
   	  	
     	</section>
     

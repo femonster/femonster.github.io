@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://femonster.github.io">
-  <title>Archives: 2017/9 | z-Blog</title>
+  <title>js的一些笔记 | z-Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="小前端一枚">
+  <meta name="description" content="http://www.webstandards.org/files/acid2/test.html#top检测是否为标准浏览器 1.call,apply 作用：参数传递，(*)扩大作用域==call, apply作用就是借用别人的方法来调用,就像调用自己的一样.==call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个">
 <meta name="keywords" content="前端,js,html,css">
-<meta property="og:type" content="website">
-<meta property="og:title" content="z-Blog">
-<meta property="og:url" content="http://femonster.github.io/archives/2017/09/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js的一些笔记">
+<meta property="og:url" content="http://femonster.github.io/2017/09/25/js的一些笔记/index.html">
 <meta property="og:site_name" content="z-Blog">
-<meta property="og:description" content="小前端一枚">
+<meta property="og:description" content="http://www.webstandards.org/files/acid2/test.html#top检测是否为标准浏览器 1.call,apply 作用：参数传递，(*)扩大作用域==call, apply作用就是借用别人的方法来调用,就像调用自己的一样.==call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个">
+<meta property="og:updated_time" content="2017-09-25T15:45:47.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="z-Blog">
-<meta name="twitter:description" content="小前端一枚">
+<meta name="twitter:title" content="js的一些笔记">
+<meta name="twitter:description" content="http://www.webstandards.org/files/acid2/test.html#top检测是否为标准浏览器 1.call,apply 作用：参数传递，(*)扩大作用域==call, apply作用就是借用别人的方法来调用,就像调用自己的一样.==call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个">
   
     <link rel="alternative" href="/atom.xml" title="z-Blog" type="application/atom+xml">
   
@@ -157,76 +158,258 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-js的一些笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      js的一些笔记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/25/js的一些笔记/" class="archive-article-date">
+
+        
+        <a href="/2017/09/25/js的一些笔记/" class="archive-article-date">
   	<time datetime="2017-09-25T14:11:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-25</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/25/js的一些笔记/">js的一些笔记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://www.webstandards.org/files/acid2/test.html#top" target="_blank" rel="external">http://www.webstandards.org/files/acid2/test.html#top</a><br>检测是否为标准浏览器</p>
+<h4 id="1-call-apply"><a href="#1-call-apply" class="headerlink" title="1.call,apply"></a>1.call,apply</h4><blockquote>
+<p>作用：参数传递，(*)扩大作用域<br>==call, apply作用就是借用别人的方法来调用,就像调用自己的一样.==<br>call, apply方法区别是,从第二个参数起, call方法参数将依次传递给借用的方法作参数, 而apply直接将这些参数放到一个数组中再传递, 最后借用方法的参数列表是一样的</p>
+</blockquote>
+<h4 id="2-创建对象"><a href="#2-创建对象" class="headerlink" title="2.创建对象"></a>2.创建对象</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">//单个对象，用json(重要)</div><div class="line">var person1=&#123;</div><div class="line">    name:&quot;john&quot;,</div><div class="line">    age:23,</div><div class="line">    friends:[&quot;Bob&quot;,&quot;zhang&quot;],</div><div class="line">    say:function()&#123;</div><div class="line">        alert(this.name+&apos;,&apos;+this.age);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//批量创建对象，使用构造函数+原型(动态原型模式),不能使用字面量方法来重写原型</div><div class="line">function Person(name,age)&#123;</div><div class="line">    this.name = name;</div><div class="line">    this.age = age;</div><div class="line">    if(typeof this.showName!=&apos;function&apos;)&#123;//防止多次创建</div><div class="line">        Person.prototype.showName=function()&#123;</div><div class="line">            alert(this.name);</div><div class="line">        &#125;;</div><div class="line">        Person.prototype.showAge=function()&#123;</div><div class="line">            alert(this.age);</div><div class="line">        &#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var person1 = new Person(&quot;zhang&quot;,22);</div><div class="line">person1.showName(); //zhang</div><div class="line">var person2 = new Person(&quot;song&quot;,23);</div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="3-原型"><a href="#3-原型" class="headerlink" title="3.原型"></a>3.原型</h4><p>检测某个对象是否是某个函数的原型<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(Person.prototype.isPrototypeOf(p1)); //true</div></pre></td></tr></table></figure></p>
+<p>检测某个对象的constructor<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(p1.constructor == Person); //true</div></pre></td></tr></table></figure></p>
+<p>检测某个属性是否是自己的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(p1.hasOwnProperty(&quot;name&quot;)); //false</div></pre></td></tr></table></figure></p>
+<p>检测某个属性是否在自己或者原型上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&quot;name&quot; in p1); //true</div></pre></td></tr></table></figure></p>
+<p>检测某个属性是否在原型上存在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">function hasPrototypeProperty(obj,prop)&#123;</div><div class="line">    return !obj.hasOwnProperty(prop)&amp;&amp;(name in object);</div><div class="line">&#125;</div><div class="line">alert(hasPrototypeProperty(p1,&quot;name&quot;)); //true</div></pre></td></tr></table></figure></p>
+<h4 id="4-继承"><a href="#4-继承" class="headerlink" title="4.继承"></a>4.继承</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">function Person(name,age) &#123;</div><div class="line">		this.name=name;</div><div class="line">		this.age=age;</div><div class="line">	&#125;</div><div class="line">	Person.prototype.showName = function() &#123;</div><div class="line">		alert(this.name);</div><div class="line">	&#125;;</div><div class="line">	Person.prototype.showAge = function() &#123;</div><div class="line">		alert(this.age);</div><div class="line">	&#125;;</div><div class="line">	// -------------------------------------------</div><div class="line">	function Worker(name,age,job)&#123;</div><div class="line">		//this-&gt;worker的对象</div><div class="line">		//构造函数伪装 ——&gt; 调用父级的构造函数--为了继承属性</div><div class="line">		Person.call(this,name,age);</div><div class="line">		this.job=job;</div><div class="line">	&#125;</div><div class="line">	//-----------------第一种写法（推荐）------------------------------------</div><div class="line">	//通过原型来继承父级方法</div><div class="line">	// Worker.prototype=Person.prototype;</div><div class="line">	//这段代码并不对，因为这是引用，在worker.prototype上做修改会影响Person.prototype，子类影响了父类，是不对的</div><div class="line">	</div><div class="line">	for(var i in Person.prototype)&#123;</div><div class="line">		Worker.prototype[i]=Person.prototype[i];</div><div class="line">	&#125;</div><div class="line">	//------------------第二种写法（会重复创建实例属性）---------------------</div><div class="line">	//for in 循环这段代码也可以写成下面这样,不过for in 循环更好理解</div><div class="line">	//将父类的实例赋给子类的原型，子类的实例还可以赋给孙类的原型，层层递进，实现继承（原型链）</div><div class="line">	// Worker.prototype=new Person();</div><div class="line">	// Worker.prototype.constructor=Person;</div><div class="line"></div><div class="line">	Worker.prototype.showJob = function() &#123;</div><div class="line">		alert(this.job);</div><div class="line">	&#125;;</div><div class="line"> 	var pZgk= new Person(&apos;zgk&apos;,23);</div><div class="line">	var zgk = new Worker(&apos;zgk&apos;,23,&apos;CTO&apos;);</div><div class="line">	pZgk.showName();  //zgk</div><div class="line">	pZgk.showAge();   //23</div><div class="line"></div><div class="line">	zgk.showName();  //zgk</div><div class="line">	zgk.showJob();   //CTO</div></pre></td></tr></table></figure>
+<h4 id="5-闭包"><a href="#5-闭包" class="headerlink" title="5.闭包"></a>5.闭包</h4><blockquote>
+<p>作用域链本质上是一个指向变量对象的指针列表，它只引用但不实际包含变量对象</p>
+</blockquote>
+<p>==闭包是指能够访问自由变量的函数==。如果一个作用域中使用的变量并不是在该作用域中声明的，那么这个变量对于该作用域来说就是自由变量<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">function compareFunction(propertyName)&#123;</div><div class="line">//匿名函数</div><div class="line">    return function(object1,object2)&#123;</div><div class="line">        var value1 = object1[propertyName];</div><div class="line">        var value2 = object2[propertyName];</div><div class="line">        if(value1&lt;value2)  return -1;</div><div class="line">        else if(value1&gt;value2) return 1;</div><div class="line">        else return 0;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var o1 = &#123;name:&apos;zhang&apos;,age:23&#125;;</div><div class="line">var o2 = &#123;name:&apos;song&apos;,age:24&#125;;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>在JAVA或C++中，以下代码执行完成后，需要进行内存的释放 ， propertyName会被释放，但是在js中，这个作用域却被放大了</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var compare = compareObjectFunction(&quot;age&quot;);//通过年龄来比较</div></pre></td></tr></table></figure>
+<blockquote>
+<p>在js中，propertyName依然可以被访问，这种通过返回函数来扩大函数的作用域的方法，就是闭包。但是闭包也占用了更多的内存</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var real = compare(o1,o2);   // real = -1</div></pre></td></tr></table></figure>
+<ul>
+<li><h6 id="闭包与变量"><a href="#闭包与变量" class="headerlink" title="闭包与变量"></a>闭包与变量</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">function fn1() &#123;</div><div class="line">    var result = [];</div><div class="line">	// i这个变量是保存在fn1这个作用域中</div><div class="line">	for (var i = 0; i &lt; 10; i++) &#123;</div><div class="line">		result[i] = function()&#123;</div><div class="line">			return i;</div><div class="line">		&#125;;</div><div class="line">	&#125;</div><div class="line">	return result;	</div><div class="line">&#125;</div><div class="line"></div><div class="line">var aRs = fn1();</div><div class="line">	/**</div><div class="line">	此时通过闭包来调用所有函数，当输出i的时候</div><div class="line">	会去上一级的作用域链中查找</div><div class="line">	这个时候i的值已经是10，所以连续输出了10个10</div><div class="line">	*/</div><div class="line">for (var i = 0; i &lt; aRs.length; i++) &#123;</div><div class="line">	document.write(aRs[i]()+&quot;&lt;br/&gt;&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>解决方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">function fn1() &#123;</div><div class="line">		var result = [];</div><div class="line">		//i</div><div class="line">		for (var i = 0; i &lt; 10; i++) &#123;</div><div class="line">			result[i] = function(num)&#123;</div><div class="line">				return function()&#123;</div><div class="line">					return num;</div><div class="line">				&#125;;</div><div class="line">			&#125;(i);</div><div class="line">		&#125;</div><div class="line">		return result;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><h6 id="内存泄漏"><a href="#内存泄漏" class="headerlink" title="内存泄漏"></a>内存泄漏</h6><blockquote>
+<p>如果闭包的作用域链中保存着一个HTML元素，那么就意味着该元素将无法被销毁</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">function assignHandler()&#123;</div><div class="line">    var element = document.get````;</div><div class="line">    //只要匿名函数存在，element的引用数至少为1，所以占用的内存永远不会回收</div><div class="line">    element.onclick = function()&#123;</div><div class="line">        alert(element.id);</div><div class="line">    &#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>解决方法</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function assignHandler()&#123;</div><div class="line">    var element = document.get````;</div><div class="line">    id = element.id;//消除了循环引用</div><div class="line">    element.onclick = function()&#123;</div><div class="line">        alert(id);</div><div class="line">    &#125;;</div><div class="line">    element=null;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="6-块作用域"><a href="#6-块作用域" class="headerlink" title="6.块作用域"></a>6.块作用域</h4><blockquote>
+<p>在js中没有块作用域，不管是使用循环或者判断后，这个变量会一直存在。所以当在全局使用某个变量进行循环或者判断之后，这个变量可能会影响到函数中的变量，所以除非在特殊情况，否则不要使用全局变量</p>
+</blockquote>
+<h4 id="7-私有变量"><a href="#7-私有变量" class="headerlink" title="7.私有变量"></a>7.私有变量</h4><blockquote>
+<p>此时就没有办法直接访问name这个属性，因为没有this.name<br>要访问name只能通过this.getName,this.setName</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">funciton Person(name)&#123;</div><div class="line"></div><div class="line">    this.getName = function()&#123;</div><div class="line">        return name;</div><div class="line">    &#125;;</div><div class="line">    this.setName = function(value)&#123;</div><div class="line">        name = value;</div><div class="line">    &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line">var p1 = new Person(&apos;zhang&apos;);</div><div class="line">alert(pi.getName()); //zhang</div><div class="line">p1.setName(&apos;song&apos;);</div><div class="line">alert(p1.getName()); //song</div></pre></td></tr></table></figure>
+<blockquote>
+<p>但是使用这种方式创建私有变量带来的问题是，每个对象都存储了大量的函数。  解决的方法师通过静态私有变量来解决</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">(function()&#123;</div><div class="line">    var name = &quot;&quot;;</div><div class="line">    Person = function(value)&#123;</div><div class="line">        name = value;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    Person.prototype.getName = function()&#123;</div><div class="line">        return name;</div><div class="line">    &#125;;</div><div class="line">    </div><div class="line">    Person.prototype.setName = function(value)&#123;</div><div class="line">        name = value;</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<blockquote>
+<p>同时，使用静态私有变量带来的问题是每个实例没有了自己的私有变量。在一个实例上调用setName()会影响所有实例</p>
+</blockquote>
+<h4 id="8-表格"><a href="#8-表格" class="headerlink" title="8.表格"></a>8.表格</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">	/**</div><div class="line">	* </div><div class="line"> * caption: 表标题</div><div class="line"> * rows:一个表格中所有行的HTMLCollection</div><div class="line"> * cells: 保存着&lt;tr&gt;元素中单元格的HTMLCollection</div><div class="line"> * deleteRow(pos):删除指定的行</div><div class="line"> * createCaption:创建标题</div><div class="line"> *</div><div class="line"> */</div><div class="line">//创建table</div><div class="line">var table=document.createElement(&apos;table&apos;);</div><div class="line">table.border=1;</div><div class="line">table.width=&apos;100%&apos;;</div><div class="line"></div><div class="line">//创建tbody</div><div class="line">var tbody = document.createElement(&apos;tbody&apos;);</div><div class="line">table.appendChild(tbody);</div><div class="line"></div><div class="line">//创建第一行</div><div class="line">tbody.insertRow(0);  //在rows集合中的第一个位置插入一行</div><div class="line">tbody.rows[0].insertCell(0);  //创建第一行第一格</div><div class="line">tbody.rows[0].cells[0].appendChild(document.createTextNode(&apos;Cell 1,1&apos;)); //第一行第一格插入文字 </div><div class="line">tbody.rows[0].insertCell(1);</div><div class="line">tbody.rows[0].cells[1].appendChild(document.createTextNode(&apos;Cell 2,1&apos;));</div><div class="line"></div><div class="line">//创建第二行</div><div class="line">tbody.insertRow(1);</div><div class="line">tbody.rows[1].insertCell(0);</div><div class="line">tbody.rows[1].cells[0].appendChild(document.createTextNode(&apos;Cell 1,2&apos;));</div><div class="line">tbody.rows[1].insertCell(1);</div><div class="line">tbody.rows[1].cells[1].appendChild(document.createTextNode(&apos;Cell 2,2&apos;));</div><div class="line"></div><div class="line">document.body.appendChild(table);</div></pre></td></tr></table></figure>
+<h4 id="9-选择符AP1"><a href="#9-选择符AP1" class="headerlink" title="9.选择符AP1"></a>9.选择符AP1</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">querySelector() , 接受一个css选择符，返回与该模式匹配的第一个元素</div><div class="line"></div><div class="line">querySelectorAll(),接受一个css选择符，返回与该模式匹配的所有元素</div><div class="line"></div><div class="line">matchesSelector(), 接受一个css选择符，如果匹配，返回true</div></pre></td></tr></table></figure>
+<h4 id="10-元素遍历"><a href="#10-元素遍历" class="headerlink" title="10.元素遍历"></a>10.元素遍历</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">childElementCount , 返回子元素（不包含文本节点和注释）的个数</div><div class="line">firstElementChild , 指向第一个子元素</div><div class="line">lastElementChild ， 指向最后一个子元素</div><div class="line">previousElementChild，指向前一个同辈元素</div><div class="line">nextElementChild，指向后一个同辈元素</div></pre></td></tr></table></figure>
+<h4 id="10-作用域"><a href="#10-作用域" class="headerlink" title="10.作用域"></a>10.作用域</h4><blockquote>
+<p>浏览器：<br>“JS解析器”<br>1）“找一些东西”    ：预解析！~ 三个东西： var  function 参数<br>a = …<br>==所有的变量，在正式运行代码之前，都提前赋了一个值：未定义==<br>fn1 = function fn1(){ alert(2); }<br>==所有的函数，在正式运行代码之前，都是整个函数块==<br>JS 的预解析<br>==遇到重名的：只留一个==<br>==变量和函数重名了，就只留下函数==<br>2）逐行解读代码：<br>表达式：= + - * / % ++ – ! 参数……<br>==表达式可以修改预解析的值==！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">alert(a);					// function a ()&#123; alert(4); &#125;</div><div class="line">var a = 1;</div><div class="line">alert(a);					// 1</div><div class="line">function a ()&#123; alert(2); &#125;</div><div class="line">alert(a);					// 1</div><div class="line">var a = 3;		</div><div class="line">alert(a);					// 3</div><div class="line">function a ()&#123; alert(4); &#125;</div><div class="line">alert(a);					// 3</div></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">function fn1()&#123;</div><div class="line">    alert(a);		//undefined</div><div class="line">	var a = 2;     //函数中也是一个作用域，a在函数中已经定义，所以不会再去上一级作用域链 中去寻找</div><div class="line">&#125;</div><div class="line">fn1();</div><div class="line">alert(a);			// 1 ，弹出去全局变量a</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">function fn1()&#123;</div><div class="line">	alert(a);		// 1，去上一个作用域寻找</div><div class="line">	a = 2;            // 因为没有申明，所以去上一级作用域去作用</div><div class="line">&#125;</div><div class="line">fn1();          </div><div class="line">alert(a);			// 2</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">function fn1(a)&#123;</div><div class="line">	alert(a);       //undefined,预解析到参数</div><div class="line">	a = 2;</div><div class="line">&#125;</div><div class="line">fn1();</div><div class="line">alert(a);		    // 1</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = 1;</div><div class="line">function fn1(a)&#123;</div><div class="line">	alert(a);			// 1 传入参数a=1</div><div class="line">	a = 2;</div><div class="line">&#125;</div><div class="line">fn1(a);</div><div class="line">alert(a);			   // 1</div></pre></td></tr></table></figure>
+<h4 id="11-字符串"><a href="#11-字符串" class="headerlink" title="11.字符串"></a>11.字符串</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">var str = &apos;妙味课堂-WWW.miaov.com&apos;;</div><div class="line"></div><div class="line">str.charAt(1);			    // &apos;味&apos;</div><div class="line">str.charCodeAt(1);			// 21619  返回 码</div><div class="line">String.fromCharCode(22937, 21619);	// &apos;妙味&apos; 将码翻译为字符</div><div class="line"></div><div class="line">str.indexOf(&apos;m&apos;, 4);			// 9 查找字符在字符串里的位置，第二个参数表明从第5个开始找，返回-1表明没有</div><div class="line">str.lastIndexOf(&apos;o&apos;);			// 16 ，从后往前找</div><div class="line"></div><div class="line">&apos;1000&apos; &lt; &apos;2&apos;			// true</div><div class="line">&apos;1000&apos; &gt; 2			// true</div><div class="line"></div><div class="line">字符串截取</div><div class="line">str.substring(0, 4); ==（4,0）// &apos;妙味课堂&apos;  ， [0,4)</div><div class="line">str.slice(-3);			// &apos;com&apos; ，负数就是从后面倒着往前截取</div><div class="line"></div><div class="line">大小写转换</div><div class="line">str.toUpperCase();			// &apos;妙味课堂-WWW.MIAOV.COM&apos;</div><div class="line">str.toLowerCase();			// &apos;妙味课堂-www.miaov.com&apos;</div><div class="line"></div><div class="line">字符串分割</div><div class="line">str.split(&apos;.&apos;, 2);			// [ &apos;妙味课堂-WWW&apos;, &apos;miaov&apos; ] 分割成一个数组</div><div class="line">str2=zhang ; str2.split(&apos;&apos;);  // [&quot;z&quot;,&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;g&quot;]; 第二个参数表示取前两个</div><div class="line"></div><div class="line">将数组变为了字符串</div><div class="line">var arr = [ &apos;www&apos;, &apos;miaov&apos;, &apos;com&apos; ];</div><div class="line">arr.join(&apos;.&apos;);			// &apos;www.miaov.com</div></pre></td></tr></table></figure>
+<h4 id="12-Ajax"><a href="#12-Ajax" class="headerlink" title="12.Ajax"></a>12.Ajax</h4><blockquote>
+<p>用JavaScript异步形式去操作xml</p>
+</blockquote>
+<h4 id="13-DOM"><a href="#13-DOM" class="headerlink" title="13.DOM"></a>13.DOM</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">      childNodes  子元素 包括所有元素 （文本，节点··）   </div><div class="line">      元素.nodeType : 只读 属性 当前元素的节点类型</div><div class="line">元素节点:	1</div><div class="line">属性节点:	2</div><div class="line">文本节点：	3</div><div class="line">   元素.attributes : 只读 属性 属性列表集合</div><div class="line">   元素.children :   只读 属性 子节点列表集合 只包含元素类型的节点</div><div class="line">        </div><div class="line">      parentNode : 只读 属性 当前节点的父级节点  </div><div class="line">      offsetParent 只读 属性 离当前节点最近的有定位的父节点 默认body</div><div class="line">      offsetLeft[Top]        当前元素到定位父级的距离   </div><div class="line">      </div><div class="line">      clientWidth : 可视区宽   样式宽+padding</div><div class="line">      offsetWidth:  占位宽     样式宽+padding+border</div><div class="line">      </div><div class="line">      // 获取某元素到页面的距离  </div><div class="line">      function getPos(obj) &#123;</div><div class="line"></div><div class="line">var pos = &#123;left:0, top:0&#125;;</div><div class="line"></div><div class="line">while (obj) &#123;</div><div class="line">	pos.left += obj.offsetLeft;</div><div class="line">	pos.top += obj.offsetTop;</div><div class="line">	obj = obj.offsetParent;</div><div class="line">&#125;</div><div class="line"></div><div class="line">return pos;</div><div class="line"></div><div class="line">  	&#125;</div><div class="line">  	</div><div class="line">  元素.setAttribute(属性名称,属性值)  方法 给指定元素指定的属性设置值</div><div class="line">  元素.getAttribute()   获取</div><div class="line">  元素.removeAttribute()  移除</div><div class="line">  </div><div class="line">  用[]和.不可以操作元素的自定义属性值 但是用。。。Attribute可以</div><div class="line">  </div><div class="line">  img[src]  img.src  会获取到src的绝对路径</div><div class="line">  但是  。。。Attribute  获取到得是相对路径（ie7以上  ）</div><div class="line"></div><div class="line"> 父级. replaceChild(新节点，被替换节点) 替换子节点</div></pre></td></tr></table></figure>
+<h4 id="14-事件"><a href="#14-事件" class="headerlink" title="14.事件"></a>14.事件</h4><p>onfocus()<br>onblur()<br>oncontextmenu() 右键菜单事件，环境菜单<br>obj.focus() 使某个元素有焦点<br>obj.blur()  使某个元素失去焦点<br>obj.select() 选择obj中的所有文本内容（可交互性元素   </p>
+<p>事件对象 event<br>ie/chrome : event是一个内置的全局对象<br>ff（标准下）:   事件对象是通过事件函数的第一个擦书传入</p>
+<p>function(ev){var ev = ev ||event};  兼容性处理</p>
+<p>==事件冒泡处理： 冒泡的只是事件 而不是事件处理函数==</p>
+<p>键盘事件：<br>onkeydown:当键盘按下的时候出发 ，如果按下不抬起，会发生一连串<br>onkeyup: 当键盘抬起时触发<br>event.keycode: 数字类型 键盘按键的值 键值<br>回车键 == 13<br>左上右下 ： 37,38,39,40<br>event.ctrlkey,shiftkey,altkey  布尔值  当一个事件发生时，如果ctrl||shift||alt键按下，则返回true </p>
+<p>==注：不是所有元素能够接收键盘事件，能够响应用户输入的元素才能==</p>
+<h4 id="15-cookie"><a href="#15-cookie" class="headerlink" title="15.cookie"></a>15.cookie</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">cookie : 存储数据，当用户访问了某个网站（网页）的时候，我们就可以通过cookie来像访问者电脑上存储数据</div><div class="line">	1.不同的浏览器存放的cookie位置不一样，也是不能通用的</div><div class="line">	2.cookie的存储是以域名形式进行区分的</div><div class="line">	3.cookie的数据可以设置名字的</div><div class="line">	4.一个域名下存放的cookie的个数是有限制的，不同的浏览器存放的个数不一样</div><div class="line">	5.每个cookie存放的内容大小也是有限制的，不同的浏览器存放大小不一样</div><div class="line">	</div><div class="line">	我们通过document.cookie来获取当前网站下的cookie的时候，得到的字符串形式的值，他包含了当前网站下所有的cookie。他会把所有的cookie通过一个分号+空格的形式串联起来</div><div class="line">	</div><div class="line">	如果我们想长时间存放一个cookie。需要在设置这个cookie的时候同时给他设置一个过期的时间</div><div class="line">	cookie默认是临时存储的，当浏览器关闭进程的时候自动销毁</div><div class="line">	</div><div class="line">	document.cookie = &apos;名字=值&apos;;  </div><div class="line">	document.cookie = &apos;username=leo&apos;;  </div><div class="line">	</div><div class="line">	document.cookie = &apos;名称=值;expires=&apos; + 字符串格式的时间;  </div><div class="line">	document.cookie = &apos;username=&apos;+ encodeURI(&apos;leo\n你好&apos;) +&apos;;expires=&apos; + oDate.toGMTString();</div></pre></td></tr></table></figure>
+<h4 id="16-Ajax"><a href="#16-Ajax" class="headerlink" title="16.Ajax"></a>16.Ajax</h4><h4 id="17-正则"><a href="#17-正则" class="headerlink" title="17.正则"></a>17.正则</h4><p>让计算机能够读懂人类的规则。都是操作字符串的。</p>
+<pre><code>var re = /a/;  
+var re = new RegExp(&apos;a&apos;); (全称，当正则需要传参的时候，必须用全称写法 )
 
-        <div class="article-info info-on-right">
-          
-          
+//转义字符：\
+ $:最后面，代表结束
 
+量词：匹配不确定的位置
++：至少出现一次 &gt;=1 --&gt;{1，}
+{4,7}：最少出现4次，最多出现7次
+{4，}：最少4次
+{4}：  正好4次
+？：{0,1} 出现0次或者1次
+*：{0，} 至少出现0次
+
+//常用方法：
+1. re.test(str)   正则匹配字符串？true:false;
+2. str.search(re) 正则匹配字符串？成功的位置:-1;
+3. str.match(re)  正则匹配字符串？成功的数组:null;    
+4. oldstr.replace(re,newstr)  正则匹配字符串？替换成新的字符串:null; 
+replace的第二个参数，可以是一个字符串，也可以是一个回调函数function(newstr){}
+回调函数的第一个参数就是匹配成功的字符
+
+匹配子项：小括号()  ( 还有另外一个意思，分组操作)
+
+字符类：
+一组相似的字符 []  []里面代表一个字符   a[bde]c --&gt;abc||adc||aec
+排除 ：^ 如果写在[]里面的话，就代表排除的意思（相当于取反！吧）
+范围 ：- 如果写在[]里面的话，就代表范围的意思
+
+
+匹配中文：[\u4e00-\u9fa5]
+行首行尾空格：^\s*|\s*$
+Email：^\w+@[a-z0-9]+(\.[a-z]+){1,3}$
+网址：[a-zA-z]+://[^\s]*
+QQ号：[1-9][0-9]{4,9}
+邮政编码：[1-9]\d{5}
+身份证：[1-9]\d{14}|[1-9]\d{17}|[1-9]\d{16}x
+</code></pre><h4 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h4><p>&amp; #32; == 普通的英文半角空格</p>
+<p>&amp; #160; == &amp;  nbsp; == &amp; #xA0; == no-break space （普通的英文半角空格但不换行）</p>
+<p>&amp; #12288; == 中文全角空格 （一个中文宽度）</p>
+<p>&amp; #8194; == &amp; ensp; == en空格 （半个中文宽度）</p>
+<p>&amp; #8195; == &amp; emsp; == em空格 （一个中文宽度）</p>
+<p>&amp; #8197; == 四分之一em空格 （四分之一中文宽度）</p>
+<p>相比平时的空格（&amp; #32;），nbsp拥有不间断（non-breaking）特性。即连续的nbsp会在同一行内显示。即使有100个连续的nbsp，浏览器也不会把它们拆成两行。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://femonster.github.io/2017/09/25/js的一些笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/24/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-24T09:55:56.003Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/24/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -249,8 +432,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
