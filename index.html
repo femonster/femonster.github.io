@@ -173,11 +173,13 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="js工具函数"><a href="#js工具函数" class="headerlink" title="js工具函数"></a>js工具函数</h2><p>  有一些是平常会用到的函数，看到的时候就记下来，用的时候就很方便</p>
+        <hr>
+<p>  有一些是平常会用到的函数，看到的时候就记下来，用的时候就很方便</p>
 <hr>
 <p>1.获取url参数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 通过URL获取参数值</span></div><div class="line"><span class="comment"> * @param &#123;String&#125; name 参数的name</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQueryString</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"(^|&amp;)"</span> + name + <span class="string">"=([^&amp;]*)(&amp;|$)"</span>, <span class="string">"i"</span>);</div><div class="line">    <span class="keyword">var</span> r = <span class="built_in">window</span>.location.search.substr(<span class="number">1</span>).match(reg);</div><div class="line">    <span class="keyword">if</span> (r != <span class="literal">null</span>) <span class="keyword">return</span> <span class="built_in">unescape</span>(r[<span class="number">2</span>]); <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>2.字符串补齐<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 补齐： （需要被补的字符，需要到达的长度，补的字符）</div><div class="line">function leftpad (str, len, ch) &#123;</div><div class="line">  str = String(str);</div><div class="line">  var i = -1;</div><div class="line">  if (!ch &amp;&amp; ch !== 0) ch = &apos; &apos;;</div><div class="line">  len = len - str.length;</div><div class="line">  while (++i &lt; len) &#123;</div><div class="line">    str = ch + str;</div><div class="line">  &#125;</div><div class="line">  return str;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>2.字符串补齐</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/** 补齐： （需要被补的字符，需要到达的长度，补的字符） */</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">leftpad</span> (<span class="params">str, len, ch</span>) </span>&#123;</div><div class="line">  str = <span class="built_in">String</span>(str);</div><div class="line">  <span class="keyword">var</span> i = <span class="number">-1</span>;</div><div class="line">  <span class="keyword">if</span> (!ch &amp;&amp; ch !== <span class="number">0</span>) ch = <span class="string">' '</span>;</div><div class="line">  len = len - str.length;</div><div class="line">  <span class="keyword">while</span> (++i &lt; len) &#123;</div><div class="line">    str = ch + str;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> str;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2017/10/09/js工具函数/#more">more >></a>
         
@@ -204,80 +206,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/10/09/js工具函数/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/28/test/">lalala</a>
-    </h1>
-  
-
-        
-        <a href="/2017/09/28/test/" class="archive-article-date">
-  	<time datetime="2017-09-27T16:23:53.495Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>~~</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/28/test/">展开全文 >></a>
         </p>
       
 
@@ -553,11 +481,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
             
             <div class="clearfix"></div>
