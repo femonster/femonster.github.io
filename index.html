@@ -153,6 +153,88 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-原生js实现数据的双向绑定" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/12/原生js实现数据的双向绑定/">原生js实现数据的双向绑定</a>
+    </h1>
+  
+
+        
+        <a href="/2017/10/12/原生js实现数据的双向绑定/" class="archive-article-date">
+  	<time datetime="2017-10-12T13:56:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>学习vue的过程中，对双向绑定的实现产生了兴趣。于是就结合网上的资料研究了一番。想用原生js实现vue双向绑定效果。</p>
+</blockquote>
+<h3 id="1-实现目标"><a href="#1-实现目标" class="headerlink" title="1.实现目标"></a>1.实现目标</h3><p>最后当然是希望实现和vue一样的效果</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"app"</span>&gt;</div><div class="line">		&lt;input type=<span class="string">"text"</span> v-model=<span class="string">"zname"</span>&gt;</div><div class="line">		&lt;span&gt;&#123;&#123;zname&#125;&#125;&lt;<span class="regexp">/span&gt;</span></div><div class="line"><span class="regexp">	&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src="</span>js/vue.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">	var vm = new Vue(&#123;</span></div><div class="line">		el:"#app",</div><div class="line">		data:&#123;</div><div class="line">			zname:<span class="string">"zhanggk"</span></div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="2-初探"><a href="#2-初探" class="headerlink" title="2.初探"></a>2.初探</h3><p>一开始想到的是使用input事件来检测输入框输入，从而更改对象的属性值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;input type=<span class="string">"text"</span> id=<span class="string">"aa"</span>/&gt;</div><div class="line">&lt;span id=<span class="string">"bb"</span>&gt;&lt;/span&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp">    var obj = &#123;&#125;;</span></div><div class="line"><span class="regexp">    var node = document.getElementById('aa');</span></div><div class="line"><span class="regexp">    </span></div><div class="line"><span class="regexp">    var otxt = document.getElementById('bb');</span></div><div class="line"><span class="regexp">    </span></div><div class="line"><span class="regexp">    node.addEventListener("input",function() &#123;</span></div><div class="line"><span class="regexp">       otxt.innerHTML = obj.hello = this.value;</span></div><div class="line"><span class="regexp">    &#125;)</span></div><div class="line"><span class="regexp">&lt;/</span>script&gt;</div></pre></td></tr></table></figure></p>
+<p>但这样做我们只是简单的模拟了一个数据绑定，只是一个“样子货”。和vue实现的相差太远。相当于只是实现了view到model的绑定。<br>想要实现model到view的数据绑定，需要监控属性值得变化，将变化后的值反馈给view层。</p>
+        
+          <a class="article-more-a" href="/2017/10/12/原生js实现数据的双向绑定/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/10/12/原生js实现数据的双向绑定/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-js工具函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
