@@ -6,19 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://femonster.github.io">
-  <title>原生js实现数据的双向绑定 | z-Blog</title>
+  <title>Archives: 2018 | z-Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习vue的过程中，对双向绑定的实现产生了兴趣。于是就结合网上的资料研究了一番。想用原生js实现vue双向绑定效果。  1.实现目标最后当然是希望实现和vue一样的效果 123456789101112131415&amp;lt;body&amp;gt;	&amp;lt;div id=&quot;app&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; v-model=&quot;zname&quot;&amp;gt;		&amp;lt;span&amp;gt;&amp;#1">
-<meta name="keywords" content="js">
-<meta property="og:type" content="article">
-<meta property="og:title" content="原生js实现数据的双向绑定">
-<meta property="og:url" content="http://femonster.github.io/2017/10/12/原生js实现数据的双向绑定/index.html">
+  <meta name="description" content="小前端一枚">
+<meta name="keywords" content="前端,js,html,css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="z-Blog">
+<meta property="og:url" content="http://femonster.github.io/archives/2018/index.html">
 <meta property="og:site_name" content="z-Blog">
-<meta property="og:description" content="学习vue的过程中，对双向绑定的实现产生了兴趣。于是就结合网上的资料研究了一番。想用原生js实现vue双向绑定效果。  1.实现目标最后当然是希望实现和vue一样的效果 123456789101112131415&amp;lt;body&amp;gt;	&amp;lt;div id=&quot;app&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; v-model=&quot;zname&quot;&amp;gt;		&amp;lt;span&amp;gt;&amp;#1">
-<meta property="og:updated_time" content="2017-10-12T14:31:25.410Z">
+<meta property="og:description" content="小前端一枚">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="原生js实现数据的双向绑定">
-<meta name="twitter:description" content="学习vue的过程中，对双向绑定的实现产生了兴趣。于是就结合网上的资料研究了一番。想用原生js实现vue双向绑定效果。  1.实现目标最后当然是希望实现和vue一样的效果 123456789101112131415&amp;lt;body&amp;gt;	&amp;lt;div id=&quot;app&quot;&amp;gt;		&amp;lt;input type=&quot;text&quot; v-model=&quot;zname&quot;&amp;gt;		&amp;lt;span&amp;gt;&amp;#1">
+<meta name="twitter:title" content="z-Blog">
+<meta name="twitter:description" content="小前端一枚">
   
     <link rel="alternative" href="/atom.xml" title="z-Blog" type="application/atom+xml">
   
@@ -152,109 +151,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-原生js实现数据的双向绑定" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      原生js实现数据的双向绑定
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/03/06/防抖和节流/" class="archive-article-date">
+  	<time datetime="2018-03-06T14:07:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-06</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/03/06/防抖和节流/">防抖和节流</a>
     </h1>
   
 
-        
-        <a href="/2017/10/12/原生js实现数据的双向绑定/" class="archive-article-date">
-  	<time datetime="2017-10-12T13:56:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>学习vue的过程中，对双向绑定的实现产生了兴趣。于是就结合网上的资料研究了一番。想用原生js实现vue双向绑定效果。</p>
-</blockquote>
-<h3 id="1-实现目标"><a href="#1-实现目标" class="headerlink" title="1.实现目标"></a>1.实现目标</h3><p>最后当然是希望实现和vue一样的效果</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"app"</span>&gt;</div><div class="line">		&lt;input type=<span class="string">"text"</span> v-model=<span class="string">"zname"</span>&gt;</div><div class="line">		&lt;span&gt;&#123;&#123;zname&#125;&#125;&lt;<span class="regexp">/span&gt;</span></div><div class="line"><span class="regexp">	&lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">" src="</span>js/vue.js<span class="string">"&gt;&lt;/script&gt;</span></div><div class="line"><span class="string">&lt;script&gt;</span></div><div class="line"><span class="string">	var vm = new Vue(&#123;</span></div><div class="line">		el:"#app",</div><div class="line">		data:&#123;</div><div class="line">			zname:<span class="string">"zhanggk"</span></div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="2-初探"><a href="#2-初探" class="headerlink" title="2.初探"></a>2.初探</h3><p>一开始想到的是使用input事件来检测输入框输入，从而更改对象的属性值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;input type=<span class="string">"text"</span> id=<span class="string">"aa"</span>/&gt;</div><div class="line">&lt;span id=<span class="string">"bb"</span>&gt;&lt;/span&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp">    var obj = &#123;&#125;;</span></div><div class="line"><span class="regexp">    var node = document.getElementById('aa');</span></div><div class="line"><span class="regexp">    </span></div><div class="line"><span class="regexp">    var otxt = document.getElementById('bb');</span></div><div class="line"><span class="regexp">    </span></div><div class="line"><span class="regexp">    node.addEventListener("input",function() &#123;</span></div><div class="line"><span class="regexp">       otxt.innerHTML = obj.hello = this.value;</span></div><div class="line"><span class="regexp">    &#125;)</span></div><div class="line"><span class="regexp">&lt;/</span>script&gt;</div></pre></td></tr></table></figure></p>
-<p>但这样做我们只是简单的模拟了一个数据绑定，只是一个“样子货”。和vue实现的相差太远。相当于只是实现了view到model的绑定。<br>想要实现model到view的数据绑定，需要监控属性值得变化，将变化后的值反馈给view层。</p>
-<a id="more"></a>
-<p>vue中采用的是数据劫持的方法。</p>
-<p>通过 <strong>Object.defineProperty()</strong> 进行数据劫持，来实现监听数据变动的目的。</p>
-<p><em>此处涉及到了js对象的两种属性之一的访问器属性</em></p>
-<blockquote>
-<p>ECMAScript中有两种属性：数据属性和访问器属性</p>
-</blockquote>
-<p><strong>数据属性</strong></p>
-<ul>
-<li>[[Configurable]] ······ 表示能否通过delete删除属性从而重新定义属性</li>
-<li>[[Enumberable]]  ······ 表示能否通过for-in循环返回属性</li>
-<li>[[Writable]] ··············· 表示能否修改属性的值</li>
-<li>[[Value]] ····················· 包含这个属性的数据值</li>
-</ul>
-<p><strong>访问器属性</strong></p>
-<ul>
-<li>[[Configurable]] ······ 表示能否通过delete删除属性从而重新定义属性</li>
-<li>[[Enumberable]] ······ 表示能否通过for-in循环返回属性</li>
-<li>[[Set]] ·························· 在读取属性时调用的函数。默认值为undefined</li>
-<li>[[Get]] ·························· 在写入属性时调用的函数。默认值为undefined</li>
-</ul>
-<p>我们可以通过设置set，get属性，劫持对象属性的设置，从而监控数据变动。<br><strong>但访问器属性不能直接定义，必须使用Object.defineProperty()来定义。</strong></p>
-<p><em>同时结合input事件，简易模拟数据的双向绑定</em></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">&lt;input type=<span class="string">"text"</span> id=<span class="string">"aa"</span>/&gt;</div><div class="line">&lt;span id=<span class="string">"bb"</span>&gt;&lt;/span&gt;</div><div class="line">&lt;script&gt;</div><div class="line">    <span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line">    <span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">'aa'</span>);</div><div class="line">    <span class="keyword">var</span> otxt = <span class="built_in">document</span>.getElementById(<span class="string">'bb'</span>);   </div><div class="line">    </div><div class="line">    <span class="built_in">Object</span>.defineProperty(obj,<span class="string">'hello'</span>,&#123;</div><div class="line">        set:<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">        	<span class="keyword">this</span>._hello = val;</div><div class="line">            node.value = val;</div><div class="line">            otxt.innerHTML = val;</div><div class="line"></div><div class="line">        &#125;,</div><div class="line">        get:<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        	<span class="keyword">return</span> <span class="keyword">this</span>._hello</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">    node.addEventListener(<span class="string">"input"</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        obj.hello = <span class="keyword">this</span>.value;</div><div class="line">    &#125;)</div><div class="line"></div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>body&gt;</div></pre></td></tr></table></figure>
-<h3 id="3-进阶一"><a href="#3-进阶一" class="headerlink" title="3.进阶一"></a>3.进阶一</h3><p>上面的demo使用input事件时，还会有一个问题，当输入中文时，拼音的变化也会被记录进去。</p>
-<blockquote>
-<p>中文输入优化，我们想要的结果是只有词组进入了输入框才会触发事件</p>
-</blockquote>
-<p>我们可以使用两个较新的事件来达到预期的效果：compositionstart和compositionend.兼容到ie9+</p>
-<blockquote>
-<p><em>复合事件（composition event）</em>是DOM3级事件中新添加的一类事件，用于处理IME的输入序列。IME（Input Method Editor，输入法编辑器）可以让用户输入<strong>在物理键盘上找不到的字符</strong><br>（例如中文）。复合事件就是针对检测和处理这种输入而设计的。<br><strong>compositionstart</strong>：在IME的文本复合系统打开时触发，表示要开始输入了。<br><strong>compositionupdate</strong>：在向输入字段中插入新字符时触发。<br><strong>compositionend</strong>：在IME的文本复合系统关闭时触发，表示返回正常键盘的输入状态。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">    <span class="comment">//当输入中文时，进入composition event事件处理</span></div><div class="line">	node.addEventListener(<span class="string">'compositionstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		cpLock = <span class="literal">true</span>;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"=====触发compositionstart====="</span>)</div><div class="line">	&#125;)</div><div class="line"></div><div class="line">	node.addEventListener(<span class="string">'compositionend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		cpLock = <span class="literal">false</span>;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"=====触发compositionend======"</span>);</div><div class="line">		inputend(<span class="keyword">this</span>);</div><div class="line">	&#125;)</div><div class="line"></div><div class="line">	node.addEventListener(<span class="string">'input'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"====触发input===="</span>)</div><div class="line">		inputend(<span class="keyword">this</span>)</div><div class="line">	&#125;)</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">inputend</span>(<span class="params">_this</span>) </span>&#123;</div><div class="line">		<span class="keyword">if</span> (!cpLock) &#123;</div><div class="line">			<span class="built_in">console</span>.log(_this.value);</div><div class="line">			obj.hello =  _this.value;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="4-进阶二"><a href="#4-进阶二" class="headerlink" title="4.进阶二"></a>4.进阶二</h3><blockquote>
-<p>至进阶一我们实现了简易的双向绑定,但只是监控了一个简单的单属性的对象的值。所以我们可以利用<strong>Object.keys()</strong>方法来遍历对象，将对象中的所有属性都监控起来。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--将我们需要监控的属性通过自定义属性绑定到元素上--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"aa"</span> <span class="attr">data-key</span>=<span class="string">"age"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">"bb"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>主要js：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">observe</span>(<span class="params">data</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (!data || <span class="keyword">typeof</span> data !== <span class="string">'object'</span>) &#123;</div><div class="line">		<span class="keyword">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//遍历，取出所有属性</span></div><div class="line">	<span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(data))</div><div class="line">	<span class="built_in">Object</span>.keys(data).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</div><div class="line">		defineReactive(data,key,data[key]);</div><div class="line">	&#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">defineReactive</span>(<span class="params">data,key,val</span>) </span>&#123;</div><div class="line">	observe(val);<span class="comment">//监听子属性</span></div><div class="line">	<span class="built_in">Object</span>.defineProperty(data,key,&#123;</div><div class="line">		enumberable:<span class="literal">true</span>,</div><div class="line">		configurable:<span class="literal">false</span>,</div><div class="line">		get:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">			<span class="keyword">return</span> val;</div><div class="line">		&#125;,</div><div class="line">		set:<span class="function"><span class="keyword">function</span>(<span class="params">newVal</span>) </span>&#123;</div><div class="line">			<span class="keyword">if</span>(val === newVal) <span class="keyword">return</span>;</div><div class="line">			<span class="built_in">console</span>.log(<span class="string">"已监听到值的变化"</span>,val,<span class="string">"----&gt;"</span>,newVal);</div><div class="line">			val = newVal;</div><div class="line">			otxt.innerHTML = val;</div><div class="line">			node.value = val;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>至此我们实现了一个简易的数据双向绑定，但离vue的实现还差的很远，至少我们的数据只是很简单的通过innerHTML填入到dom元素中，而不是向vue一般通过”{ { } }”符号插入到被选中元素的任意一个地方</p>
-<h3 id="5-进阶三"><a href="#5-进阶三" class="headerlink" title="5.进阶三"></a>5.进阶三</h3><blockquote>
-<p>至进阶二我们只是简单的进行了模拟，说明了原理。我们最终想要实现的样子是这样的</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">    &lt;div id=<span class="string">"app"</span>&gt;</div><div class="line">        &lt;input type=<span class="string">"text"</span> id=<span class="string">"a"</span> z-model=<span class="string">"myname"</span>&gt; </div><div class="line">        &lt;span&gt;我的名字是：&#123;&#123;myname&#125;&#125;&lt;<span class="regexp">/span&gt;</span></div><div class="line"><span class="regexp">    &lt;/</span>div&gt;</div><div class="line">&lt;<span class="regexp">/body&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">&lt;script&gt;</span></div><div class="line"><span class="regexp">var zm = new Zue(&#123;</span></div><div class="line"><span class="regexp">    el: "#app",</span></div><div class="line"><span class="regexp">    data: &#123;</span></div><div class="line"><span class="regexp">        myname: "zhang"</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;)</span></div><div class="line"><span class="regexp">&lt;/</span>script&gt;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>其实就是最终实现三个步骤</p>
-</blockquote>
-<ol>
-<li>输入框以及文本节点与 data 中的数据绑定</li>
-<li>输入框内容变化时，data 中的数据同步变化。即 view =&gt; model 的变化。</li>
-<li>data 中的数据变化时，文本节点的内容同步变化。即 model =&gt; view 的变化。</li>
-</ol>
-<blockquote>
-<p>要实现步骤一，需要理解一个知识点，例如如下例子：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"app"</span>&gt;</div><div class="line">		&lt;input type=<span class="string">"text"</span> id=<span class="string">"a"</span>&gt;</div><div class="line">		&lt;span id=<span class="string">"b"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></div><div class="line">	&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>body&gt;</div><div class="line">&lt;script&gt;</div><div class="line"><span class="comment">// 使用documentFragment处理节点，就是将挂载目标的所有子节点劫持到 DocumentFragment 中（通过appendChild方法，DOM节点会被自动删除,然后重新插入他的新位置）。经过一番处理后，再将 DocumentFragment 整体返回插入挂载目标。</span></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">nodeToFragment</span>(<span class="params">node</span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> flag = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line">		<span class="keyword">var</span> newp = <span class="built_in">document</span>.createElement(<span class="string">"p"</span>);</div><div class="line">		newp.innerHTML=<span class="string">"重新处理过的DOM元素"</span>;</div><div class="line">		flag.appendChild(newp);</div><div class="line">		<span class="keyword">var</span> child;</div><div class="line">		<span class="keyword">while</span>(child = node.firstChild)&#123;</div><div class="line">			<span class="built_in">console</span>.log(child);</div><div class="line">			flag.appendChild(child);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> flag;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">var</span> dom = nodeToFragment(<span class="built_in">document</span>.getElementById(<span class="string">'app'</span>));</div><div class="line">	</div><div class="line">	<span class="built_in">console</span>.log(dom)</div><div class="line">	</div><div class="line">	<span class="built_in">document</span>.getElementById(<span class="string">'app'</span>).appendChild(dom);</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<p>所以通过DocumentFragment我们可以实现数据的初始化绑定。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div id=<span class="string">"app"</span>&gt;</div><div class="line">		&lt;input type=<span class="string">"text"</span> id=<span class="string">"a"</span> z-model=<span class="string">"myname"</span>&gt;&#123;&#123;myname&#125;&#125;</div><div class="line">	&lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>body&gt;</div><div class="line">&lt;script&gt;</div><div class="line"><span class="comment">// 处理被劫持的dom</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compile</span>(<span class="params">node, zm</span>) </span>&#123;</div><div class="line">    <span class="comment">// 获取&#123;&#123;...&#125;&#125;</span></div><div class="line">    <span class="keyword">var</span> reg = <span class="regexp">/\&#123;\&#123;(.*)\&#125;\&#125;/</span>;</div><div class="line">    <span class="comment">//节点类型为元素</span></div><div class="line">    <span class="keyword">if</span> (node.nodeName === <span class="string">'INPUT'</span>||node.nodeName === <span class="string">'TEXTAREA'</span>) &#123;</div><div class="line">        <span class="keyword">var</span> attr = node.attributes;  <span class="comment">//NamedNodeMap &#123;0: type, 1: id, 2: z-model, length: 3&#125;</span></div><div class="line">        <span class="comment">//解析属性</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; attr.length; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (attr[i].nodeName == <span class="string">'z-model'</span>) &#123;</div><div class="line">                <span class="keyword">var</span> name = attr[i].nodeValue;</div><div class="line">                </div><div class="line">                node.value = zm.data[name];</div><div class="line">                </div><div class="line">                node.removeAttribute(<span class="string">'z-model'</span>);</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line">        Observer.regist(<span class="string">"changed"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            node.value = zm.data[name];</div><div class="line">        &#125;)</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">if</span> (reg.test(node.textContent)) &#123;</div><div class="line">            <span class="keyword">var</span> name = <span class="built_in">RegExp</span>.$<span class="number">1</span>;</div><div class="line">            name = name.trim();</div><div class="line">            <span class="built_in">console</span>.log(node.textContent);</div><div class="line">            <span class="keyword">var</span> oldtext = node.textContent;</div><div class="line">            <span class="comment">// 将 &#123;&#123;...&#125;&#125; 替换</span></div><div class="line">            node.textContent=oldtext.replace(reg,zm.data[name]);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 劫持欲处理的DOM</span></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">nodeToFragment</span>(<span class="params">node,zm</span>) </span>&#123;</div><div class="line">		<span class="keyword">var</span> flag = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line">		<span class="keyword">var</span> child;</div><div class="line">		<span class="keyword">while</span>(child = node.firstChild)&#123;</div><div class="line">			compile(child,zm);</div><div class="line">			<span class="built_in">console</span>.log(<span class="string">"child:"</span>,child,zm);</div><div class="line">			flag.appendChild(child);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> flag;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Zue</span>(<span class="params">options</span>) </span>&#123;</div><div class="line">		<span class="keyword">this</span>.data = options.data;</div><div class="line">		<span class="keyword">var</span> id = options.el;</div><div class="line">		<span class="keyword">var</span> dom = nodeToFragment(<span class="built_in">document</span>.getElementById(id),<span class="keyword">this</span>);</div><div class="line">		<span class="comment">//处理完成后，将dom返回到app中</span></div><div class="line">		<span class="built_in">document</span>.getElementById(id).appendChild(dom);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="keyword">var</span> zm = <span class="keyword">new</span> Zue(&#123;</div><div class="line">		el:<span class="string">"app"</span>,</div><div class="line">		data:&#123;</div><div class="line">			myname:<span class="string">"zhang"</span></div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
-<hr>
-<blockquote>
-<p>实现步骤二，只要加入我们的input和compisition event 就好<br>实现步骤三，需要了解另一个知识点 <strong>订阅-发布模式</strong></p>
-</blockquote>
-<p>订阅发布模式（又称观察者模式）定义了一种一对多的关系，让多个观察者同时监听某一个主题对象，这个主题对象的状态发生改变时就会通知所有观察者对象。</p>
-<pre><code>发布者发出通知 =&gt; 主题对象收到通知并推送给订阅者 =&gt; 订阅者执行相应操作
-</code></pre><p>###6.最终</p>
-<p> 至此，完成一个双向绑定需要知道的知识点都已经齐全，贴上完整代码。</p>
-<p> z-model.js</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div></pre></td><td class="code"><pre><div class="line"> <span class="comment">// 发布/订阅 （代码来自 《javascript设计模式》一书）</span></div><div class="line"><span class="keyword">var</span> Observer = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> _messages = &#123;&#125;;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        <span class="comment">//注册信息接口</span></div><div class="line">        <span class="comment">//prams 消息类型以及相应的处理动作</span></div><div class="line">        regist: <span class="function"><span class="keyword">function</span>(<span class="params">type, fn</span>) </span>&#123;</div><div class="line">            <span class="comment">//如果此消息不存在则应该创建一个该消息类型</span></div><div class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> _messages[type] === <span class="string">'undefined'</span>) &#123;</div><div class="line"></div><div class="line">                _messages[type] = [fn];</div><div class="line">                <span class="comment">//如果存在</span></div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line"></div><div class="line">                _messages[type].push(fn);</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="comment">//发布信息接口 </span></div><div class="line">        fire: <span class="function"><span class="keyword">function</span>(<span class="params">type, args</span>) </span>&#123;</div><div class="line">            <span class="comment">//如果该消息没有被注册，则返回</span></div><div class="line">            <span class="keyword">if</span> (!_messages[type]) <span class="keyword">return</span>;</div><div class="line">            <span class="comment">//定义消息信息</span></div><div class="line">            <span class="keyword">var</span> events = &#123;</div><div class="line">                    type: type,</div><div class="line">                    args: args || &#123;&#125;</div><div class="line">                &#125;,</div><div class="line">                i = <span class="number">0</span>,</div><div class="line">                len = _messages[type].length;</div><div class="line">            <span class="comment">//遍历消息动作</span></div><div class="line">            <span class="keyword">for</span> (; i &lt; len; i++) &#123;</div><div class="line"></div><div class="line">                _messages[type][i].call(<span class="keyword">this</span>, events);</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        <span class="comment">//移除信息接口</span></div><div class="line">        remove: <span class="function"><span class="keyword">function</span>(<span class="params">type, fn</span>) </span>&#123;</div><div class="line">            <span class="comment">//如果消息动作队列存在</span></div><div class="line">            <span class="keyword">if</span> (_messages[type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</div><div class="line"></div><div class="line">                <span class="keyword">var</span> i = _messages[type].length - <span class="number">1</span>;</div><div class="line"></div><div class="line">                <span class="keyword">for</span> (; i &gt;= <span class="number">0</span>; i--) &#123;</div><div class="line"></div><div class="line">                    _messages[type][i] === fn &amp;&amp; _messages[type].splice(i, <span class="number">1</span>);</div><div class="line"></div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;)();</div><div class="line"></div><div class="line"><span class="comment">// 处理中文输入时的“锁”</span></div><div class="line"><span class="keyword">var</span> cpLock = <span class="literal">false</span>;</div><div class="line"></div><div class="line"><span class="comment">// 处理被劫持的dom</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compile</span>(<span class="params">node, zm</span>) </span>&#123;</div><div class="line">    <span class="comment">// 获取&#123;&#123;...&#125;&#125;</span></div><div class="line">    <span class="keyword">var</span> reg = <span class="regexp">/\&#123;\&#123;(.*)\&#125;\&#125;/</span>;</div><div class="line">    <span class="comment">//节点类型为元素</span></div><div class="line">    <span class="keyword">if</span> (node.nodeName === <span class="string">'INPUT'</span>||node.nodeName === <span class="string">'TEXTAREA'</span>) &#123;</div><div class="line">        <span class="keyword">var</span> attr = node.attributes;  <span class="comment">//NamedNodeMap &#123;0: type, 1: id, 2: z-model, length: 3&#125;</span></div><div class="line">        <span class="comment">//解析属性</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; attr.length; i++) &#123;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (attr[i].nodeName == <span class="string">'z-model'</span>) &#123;</div><div class="line"></div><div class="line">                <span class="keyword">var</span> name = attr[i].nodeValue;</div><div class="line"></div><div class="line">                node.addEventListener(<span class="string">'compositionstart'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                    cpLock = <span class="literal">true</span>;</div><div class="line">                &#125;)</div><div class="line"></div><div class="line">                node.addEventListener(<span class="string">'compositionend'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">                    cpLock = <span class="literal">false</span>;</div><div class="line">                    <span class="keyword">if</span> (!cpLock) &#123;</div><div class="line">                        zm.data[name] = e.target.value;</div><div class="line">                    &#125;</div><div class="line">                   </div><div class="line">                &#125;)</div><div class="line"></div><div class="line">                node.addEventListener(<span class="string">'input'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line"></div><div class="line">                    <span class="keyword">if</span> (!cpLock) &#123;</div><div class="line">                        zm.data[name] = e.target.value;</div><div class="line">                    &#125;</div><div class="line"></div><div class="line">                &#125;)</div><div class="line"></div><div class="line">                node.value = zm.data[name];</div><div class="line"></div><div class="line">                node.removeAttribute(<span class="string">'z-model'</span>);</div><div class="line"></div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        Observer.regist(<span class="string">"changed"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">            node.value = zm.data[name];</div><div class="line">        &#125;)</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (reg.test(node.textContent)) &#123;</div><div class="line"></div><div class="line">            <span class="keyword">var</span> name = <span class="built_in">RegExp</span>.$<span class="number">1</span>;</div><div class="line"></div><div class="line">            name = name.trim();</div><div class="line"></div><div class="line">            <span class="built_in">console</span>.log(node.textContent);</div><div class="line"></div><div class="line">            <span class="keyword">var</span> oldtext = node.textContent;</div><div class="line"></div><div class="line">            <span class="comment">// 将 &#123;&#123;...&#125;&#125; 替换</span></div><div class="line">            node.textContent=oldtext.replace(reg,zm.data[name]);</div><div class="line"></div><div class="line">            <span class="comment">// 订阅changed事件，当changed事件被通知时，触发fn</span></div><div class="line">            Observer.regist(<span class="string">"changed"</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">                node.textContent=oldtext.replace(reg,zm.data[name]);</div><div class="line"></div><div class="line">            &#125;)</div><div class="line"></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 劫持欲处理的DOM</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">nodeToFragment</span>(<span class="params">node, zm</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> flag = <span class="built_in">document</span>.createDocumentFragment();</div><div class="line"></div><div class="line">    <span class="keyword">var</span> child;</div><div class="line"></div><div class="line">    <span class="keyword">while</span> (child = node.firstChild) &#123;</div><div class="line"></div><div class="line">        compile(child, zm);</div><div class="line"></div><div class="line">        <span class="built_in">console</span>.log(<span class="string">"child:"</span>, child, zm);</div><div class="line"></div><div class="line">        flag.appendChild(child);</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> flag;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 劫持数据</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">defineReactive</span>(<span class="params">obj, key, val</span>) </span>&#123;</div><div class="line"></div><div class="line">    observe(val); <span class="comment">//监控子属性</span></div><div class="line"></div><div class="line">    <span class="built_in">Object</span>.defineProperty(obj, key, &#123;</div><div class="line"></div><div class="line">        enumberable: <span class="literal">true</span>,</div><div class="line"></div><div class="line">        configurable: <span class="literal">false</span>,</div><div class="line"></div><div class="line">        get: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">return</span> val;</div><div class="line">        &#125;,</div><div class="line">        set: <span class="function"><span class="keyword">function</span>(<span class="params">newVal</span>) </span>&#123;</div><div class="line"></div><div class="line">            <span class="keyword">if</span> (val === newVal) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"></div><div class="line">            val = newVal;</div><div class="line">            <span class="comment">// 发布changed消息，val已经改变</span></div><div class="line">            Observer.fire(<span class="string">"changed"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 监控/劫持数据入口</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">observe</span>(<span class="params">data</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (!data || <span class="keyword">typeof</span> data !== <span class="string">'object'</span>) &#123; <span class="keyword">return</span>; &#125;</div><div class="line"></div><div class="line">    <span class="built_in">Object</span>.keys(data).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">key</span>) </span>&#123;</div><div class="line"></div><div class="line">        defineReactive(data, key, data[key]);</div><div class="line"></div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Zue主函数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Zue</span>(<span class="params">options</span>) </span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.data = options.data;</div><div class="line"></div><div class="line">    observe(<span class="keyword">this</span>.data);</div><div class="line"></div><div class="line">    <span class="keyword">var</span> el = options.el;</div><div class="line"></div><div class="line">    <span class="keyword">var</span> dom = nodeToFragment(<span class="built_in">document</span>.querySelector(el), <span class="keyword">this</span>);</div><div class="line">    <span class="comment">//处理完成后，将dom返回到app中</span></div><div class="line">    <span class="built_in">document</span>.querySelector(el).appendChild(dom);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>html<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"app"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"a"</span> <span class="attr">z-model</span>=<span class="string">"myname"</span>&gt;</span> </div><div class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>我的名字是：&#123;&#123;myname&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"z-model.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="javascript"><span class="keyword">var</span> zm = <span class="keyword">new</span> Zue(&#123;</span></div><div class="line"><span class="javascript">    el: <span class="string">"#app"</span>,</span></div><div class="line"><span class="undefined">    data: &#123;</span></div><div class="line"><span class="javascript">        myname: <span class="string">"zhang"</span></span></div><div class="line"><span class="undefined">    &#125;</span></div><div class="line"><span class="undefined">&#125;)</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p><strong>最后：我发现写博文真实太难了，需要条理清楚，文字表述清晰，有时候你脑子里知道的一些东西，偏是感觉写不出来，同时更知道自己这方面需要多锻炼，这篇博文只是我自己看和记录，不具有参考价值，之后会再整理思路和让我的文字表述更清晰一些o(╥﹏╥)o</strong><br>建议参考其他几位的博文：<br><a href="https://github.com/DMQ/mvvm" target="_blank" rel="external">https://github.com/DMQ/mvvm</a></p>
-<p><a href="https://github.com/DDFE/DDFE-blog/issues/7" target="_blank" rel="external">https://github.com/DDFE/DDFE-blog/issues/7</a></p>
-<p><a href="http://www.cnblogs.com/kidney/p/6052935.html?utm_source=gold_browser_extension" target="_blank" rel="external">http://www.cnblogs.com/kidney/p/6052935.html?utm_source=gold_browser_extension</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -266,115 +192,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://femonster.github.io/2017/10/12/原生js实现数据的双向绑定/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/03/06/防抖和节流/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          防抖和节流
-        
-      </div>
-    </a>
   
   
-    <a href="/2017/10/09/js工具函数/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js工具函数</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -397,8 +227,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
