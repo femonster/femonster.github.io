@@ -153,6 +153,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-FaceBook-and-twitter-Share-功能-JS-SDK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/05/22/FaceBook-and-twitter-Share-功能-JS-SDK/">FaceBook and twitter Share 功能 JS SDK</a>
+    </h1>
+  
+
+        
+        <a href="/2018/05/22/FaceBook-and-twitter-Share-功能-JS-SDK/" class="archive-article-date">
+  	<time datetime="2018-05-22T15:13:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="facebook"><a href="#facebook" class="headerlink" title="facebook"></a>facebook</h2><h3 id="1-直接在标签中设置以下meta"><a href="#1-直接在标签中设置以下meta" class="headerlink" title="1. 直接在标签中设置以下meta"></a>1. 直接在<head>标签中设置以下meta</head></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">  &lt;meta property=<span class="string">"fb:app_id"</span>        content=<span class="string">"150192****06562"</span> /&gt;</div><div class="line">  &lt;meta property=<span class="string">"og:url"</span>           content=<span class="string">"http://isluo.com/"</span> /&gt;</div><div class="line">  &lt;meta property=<span class="string">"og:type"</span>          content=<span class="string">"website"</span> /&gt;</div><div class="line">  &lt;meta property=<span class="string">"og:title"</span>         content=<span class="string">"标题，会出现在分享的标题部分"</span> /&gt;</div><div class="line">  &lt;meta property=<span class="string">"og:description"</span>   content=<span class="string">"简介，会出现在分享的简介部分"</span> /&gt;</div><div class="line">  &lt;meta property=<span class="string">"og:image"</span>         content=<span class="string">"http://isluo.com/mywork/logo.jpg"</span> /&gt;</div><div class="line">  </div><div class="line">* fb: app_id      这个网站在facebook App中注册后得到的ID号，不写也没关系</div><div class="line">* og: url         需要被分享的网页连接</div><div class="line">* og: type        网页就写 website</div><div class="line">* og: title       标题，生成的facebook分享对话框中的标题</div><div class="line">* og: description 简介，生成的facebook分享对话框中的简介，不要太多</div><div class="line">* og: image       图片，分享卡片中的图片，最低尺寸要求：<span class="number">200</span>px 乘 <span class="number">200</span>px</div></pre></td></tr></table></figure>
+<h3 id="2-默认"><a href="#2-默认" class="headerlink" title="2. 默认"></a>2. 默认</h3><p>如果没有配置任何facebook相关的<code>&lt;meta&gt;</code>，也没有调用任何API时，fb会自动抓取<code>&lt;title&gt;</code>作为标题，抓取<meta name="description">作为简介，抓取网页中符合要求的图片（200<em>200以上，<em>*非异步加载的图</em></em>）作为卡片中的图片展示</p>
+<h3 id="3-fb分享调试工具"><a href="#3-fb分享调试工具" class="headerlink" title="3. fb分享调试工具"></a>3. fb分享调试工具</h3><p>facebook share 调试器：<br><a href="https://developers.facebook.com/tools/debug/sharing/" target="_blank" rel="external">https://developers.facebook.com/tools/debug/sharing/</a></p>
+<p>这个用来抓取你网页的最新信息</p>
+<p>默认的，你的网站信息会存储在facebook缓存30天<br>所以如果你的网站有更改，你需要手动重新抓取<br>你也可以直接在浏览器地址栏中输入这个网址测试：<br><a href="https://www.facebook.com/sharer.php?u=xxx.com(这里改成你自己的网站域名" target="_blank" rel="external">https://www.facebook.com/sharer.php?u=xxx.com(这里改成你自己的网站域名</a>)</p>
+<h3 id="4-分享按钮"><a href="#4-分享按钮" class="headerlink" title="4.分享按钮"></a>4.分享按钮</h3><p><a href="https://developers.facebook.com/docs/plugins/share-button" target="_blank" rel="external">https://developers.facebook.com/docs/plugins/share-button</a></p>
+<hr>
+<h2 id="twitter"><a href="#twitter" class="headerlink" title="twitter"></a>twitter</h2><h3 id="1-直接在标签中设置以下meta-1"><a href="#1-直接在标签中设置以下meta-1" class="headerlink" title="1. 直接在标签中设置以下meta"></a>1. 直接在<head>标签中设置以下meta</head></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">  &lt;meta name=<span class="string">"twitter:card"</span> content=<span class="string">"summary"</span> /&gt;</div><div class="line">  &lt;meta name=<span class="string">"twitter:site"</span>  content=<span class="string">"http://isluo.com/"</span> /&gt;</div><div class="line">  &lt;meta name=<span class="string">"twitter:creator"</span> content=<span class="string">"website"</span> /&gt;</div><div class="line">  &lt;meta name=<span class="string">"twitter:image"</span> content=<span class="string">"xxx.jpg"</span>&gt;</div><div class="line">  </div><div class="line">* twitter:card       卡片类型【“summary”, “summary_large_image”, “app”, or “player”】</div><div class="line">* twitter:site       用于卡片页脚的网站@用户名</div><div class="line">* twitter:creator    内容创建者/作者的@username</div><div class="line">* twitter:image      图片</div><div class="line"><span class="comment">//和og就差不多了</span></div></pre></td></tr></table></figure>
+<h3 id="2-调试工具"><a href="#2-调试工具" class="headerlink" title="2. 调试工具"></a>2. 调试工具</h3><p><a href="https://cards-dev.twitter.com/validator" target="_blank" rel="external">https://cards-dev.twitter.com/validator</a></p>
+<h3 id="3-设置了标签却还是生成不了卡片"><a href="#3-设置了标签却还是生成不了卡片" class="headerlink" title="3. 设置了标签却还是生成不了卡片"></a>3. 设置了标签却还是生成不了卡片</h3><p>尝试url后面加参数，清除缓存</p>
+<h3 id="4-文档"><a href="#4-文档" class="headerlink" title="4. 文档"></a>4. 文档</h3><p><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started" target="_blank" rel="external">https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">other</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/05/22/FaceBook-and-twitter-Share-功能-JS-SDK/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-防抖和节流" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -646,11 +730,15 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
             
             <div class="clearfix"></div>
