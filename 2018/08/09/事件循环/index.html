@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://femonster.github.io">
-  <title>Tag: 随笔 | z-Blog</title>
+  <title>事件循环 | z-Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="小前端一枚">
-<meta name="keywords" content="前端,js,html,css">
-<meta property="og:type" content="website">
-<meta property="og:title" content="z-Blog">
-<meta property="og:url" content="http://femonster.github.io/tags/随笔/index.html">
+  <meta name="description" content="宏任务（macro-task），微任务（micro-task）是一个队列,先进先出（FIFO）  js按值传递javascript函数参数都是按值传递（都是栈内数据的拷贝）基本类型传的是值本身（因为直接把值存在栈内），引用类型传的是对象在内存里面的地址（因为复杂对象存在堆内，所以栈里存着对象所在的堆地址）  1.介绍 js是单线程，这个线程中拥有唯一的一个事件循环，但是有多个任务队列。  任务队列">
+<meta name="keywords" content="js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="事件循环">
+<meta property="og:url" content="http://femonster.github.io/2018/08/09/事件循环/index.html">
 <meta property="og:site_name" content="z-Blog">
-<meta property="og:description" content="小前端一枚">
+<meta property="og:description" content="宏任务（macro-task），微任务（micro-task）是一个队列,先进先出（FIFO）  js按值传递javascript函数参数都是按值传递（都是栈内数据的拷贝）基本类型传的是值本身（因为直接把值存在栈内），引用类型传的是对象在内存里面的地址（因为复杂对象存在堆内，所以栈里存着对象所在的堆地址）  1.介绍 js是单线程，这个线程中拥有唯一的一个事件循环，但是有多个任务队列。  任务队列">
+<meta property="og:updated_time" content="2018-08-09T15:50:00.355Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="z-Blog">
-<meta name="twitter:description" content="小前端一枚">
+<meta name="twitter:title" content="事件循环">
+<meta name="twitter:description" content="宏任务（macro-task），微任务（micro-task）是一个队列,先进先出（FIFO）  js按值传递javascript函数参数都是按值传递（都是栈内数据的拷贝）基本类型传的是值本身（因为直接把值存在栈内），引用类型传的是对象在内存里面的地址（因为复杂对象存在堆内，所以栈里存着对象所在的堆地址）  1.介绍 js是单线程，这个线程中拥有唯一的一个事件循环，但是有多个任务队列。  任务队列">
   
     <link rel="alternative" href="/atom.xml" title="z-Blog" type="application/atom+xml">
   
@@ -151,60 +152,169 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-事件循环" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/09/28/hello-world/" class="archive-article-date">
-  	<time datetime="2017-09-27T16:23:53.493Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/28/hello-world/">Hello World</a>
+    <h1 class="article-title" itemprop="name">
+      事件循环
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/08/09/事件循环/" class="archive-article-date">
+  	<time datetime="2018-08-09T15:48:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>宏任务（macro-task），微任务（micro-task）是一个队列,先进先出（FIFO）</p>
+<blockquote>
+<p>js按值传递<br>javascript函数参数都是按值传递（都是栈内数据的拷贝）<br>基本类型传的是值本身（因为直接把值存在栈内），引用类型传的是对象在内存里面的地址（因为复杂对象存在堆内，所以栈里存着对象所在的堆地址）</p>
+</blockquote>
+<p>1.<strong>介绍</strong></p>
+<pre><code>js是单线程，这个线程中拥有唯一的一个事件循环，但是有多个任务队列。
+</code></pre><ul>
+<li>任务队列又分为marco-task（宏任务）与mirco-task（微任务）。</li>
+<li>marco-task 大概包括：script（整体代码）, setTimeout, setInterval, setImmediate, I/O, UI rendering.</li>
+<li>mirco-task 大概包括：process.nextTick,Promise,MutationObserver(html5新特性)</li>
+</ul>
+<p>个人理解：setTimeout等相当于任务分发器，其中的回调函数才是放入宏任务队列的函数。</p>
+<blockquote>
+<p>事件循环的顺序是从script开始第一次循环，随后全局上下文进入函数调用栈，遇到 宏任务 就将其交给相应处理它的模块，处理完之后将回调函数放进 macro-task 的队列中，遇到 micro-task 也将其回调函数放进 micro-task 中。直到函数调用栈清空只剩全局执行上下文，然后开始执行所有 micro-task。当所有可执行的 micro-task 执行完毕之后。循环再次执行 macro-task 中的一个任务队列，执行完之后再执行所有的 micro-task，就这样一直循环。</p>
+</blockquote>
+<p>2.<strong>例子</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">(function test() &#123;</div><div class="line">    setTimeout(function() &#123;console.log(4)&#125;, 0);</div><div class="line">    new Promise(function executor(resolve) &#123;</div><div class="line">        console.log(1);</div><div class="line">        for( var i=0 ; i&lt;10000 ; i++ ) &#123;</div><div class="line">            i == 9999 &amp;&amp; resolve();</div><div class="line">        &#125;</div><div class="line">        console.log(2);</div><div class="line">    &#125;).then(function() &#123;</div><div class="line">        console.log(5);</div><div class="line">    &#125;);</div><div class="line">    console.log(3);</div><div class="line">&#125;)()</div><div class="line"></div><div class="line">&gt; 输出 12354</div></pre></td></tr></table></figure></p>
+<p>3.<strong>注意</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">setTimeout(function() &#123;</div><div class="line">	console.log(&apos;timeout1&apos;);</div><div class="line">	new Promise(function(resolve) &#123;</div><div class="line">		console.log(&apos;promise1&apos;);</div><div class="line">		resolve();</div><div class="line">	&#125;).then(function() &#123;</div><div class="line">		console.log(&apos;promise.then1&apos;);</div><div class="line">	&#125;)</div><div class="line">&#125;,0);</div><div class="line">setTimeout(function() &#123;</div><div class="line">	console.log(&apos;timeout2&apos;);</div><div class="line">	new Promise(function(resolve) &#123;</div><div class="line">		console.log(&apos;promise2&apos;);</div><div class="line">		resolve();</div><div class="line">	&#125;).then(function() &#123;</div><div class="line">		console.log(&apos;promise.then2&apos;);</div><div class="line">	&#125;)</div><div class="line">&#125;,0);</div></pre></td></tr></table></figure>
+<p>这段代码在<strong>node环境中和浏览器环境中运行是有所差别</strong>的，主要原因是浏览器是从macro-task的setTimeout队列取出其中一个 task完成以后再去清空microtask，而在node环境是种严格按照事件循环的机制去运行的，（相当于，运行两次setTimeout后，宏任务队列中只有两个setTimeout，微任务中没有，运行setTimeout中的then时，才会分发到下一次的微任务）</p>
+<p>所以<br>在浏览器中的结果为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">timeout1</div><div class="line">promise1</div><div class="line">promise.then1</div><div class="line">timeout2</div><div class="line">promise2</div><div class="line">promise.then2</div></pre></td></tr></table></figure></p>
+<p>在node环境中运行结果为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">timeout1</div><div class="line">promise1</div><div class="line">timeout2</div><div class="line">promise2</div><div class="line">promise.then1</div><div class="line">promise.then2</div></pre></td></tr></table></figure></p>
+<p>4.<strong>参考</strong></p>
+<p>我只是为了加深记忆自己看的，想要搞清楚可以看下面我参考过的文章：</p>
+<p><a href="https://yangbo5207.github.io/wutongluo/ji-chu-jin-jie-xi-lie/shi-er-3001-shi-jian-xun-huan-ji-zhi.html" target="_blank" rel="external">这波能反杀：事件循环机制</a><br>  <a href="https://zhuanlan.zhihu.com/p/26229293" target="_blank" rel="external">一只萌媛的自我修炼：深入浅出Javascript事件循环机制</a><br>  <a href="https://juejin.im/post/58cf180b0ce4630057d6727c" target="_blank" rel="external">80% 应聘者都不及格的 JS 面试题</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://femonster.github.io/2018/08/09/事件循环/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/05/22/FaceBook-and-twitter-Share-功能-JS-SDK/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">FaceBook and twitter Share 功能 JS SDK</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -227,9 +337,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
